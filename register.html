@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Join Club | TEAM BHP ROBOTICS</title>
+<link rel="icon" href="BHP.jpg">
+
+<!-- Fonts (CSS only) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700;800&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html">
+      <div class="brand-logo">
+        <img alt="Team BHP crimson gear-and-stallion insignia logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0rTK7ogEiiCpR5TUDwyRlWMcBxXBjF3f96C0qx9UCARKuTIKk1s4m4Axl74mcr8CCRBhckRQnQguo_YgXe7_P14k9G5kGkMgP39dHyvZimk6QnNdOYuYpF6kBuXJp1pTkH0siM7BMBFU8oIiNHSwwUSXYaHXmLs4uXxH468CmGhKCjrOQyM7glOizYvvKAR3YMJDciHpJnahxqS2AKZ01YMTgAsA37TtJ4bWBm9_Hr07pEMvXr2FP_QGOSsiDBl1wnoY">
+      </div>
+      <div class="brand-text">
+        <span class="brand-title">TEAM BHP ROBOTICS <span class="dot pulse"></span></span>
+        <span class="code brand-sub wide">COMBAT MECHATRONICS DIV</span>
+      </div>
+    </a>
+
+    <nav class="main-nav" aria-label="Main Navigation">
+      <a href="index.html">Home</a>
+      <a href="events.html">Events</a>
+      <a href="projects.html">Projects</a>
+      <a href="leaderboard.html">Our Team</a>
+      <a href="about.html">About</a>
+    </nav>
+
+    <div class="header-actions">
+      <a class="btn-telemetry code" href="leaderboard.html">
+        <span class="material-symbols-outlined i-sm c-red">sensors</span>
+        <span>TELEMETRY PORTAL</span>
+      </a>
+      <a class="btn-red btn-join" href="register.html">JOIN CLUB</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- REGISTRATION -->
+  <section class="section bg-sec" id="register">
+    <div class="container">
+      <div class="reg-grid">
+
+        <div class="reg-form">
+          <div class="reg-head">
+            <span class="code eyebrow">// PIT-LANE ACCESS</span>
+            <h2 class="h-md">Bot Registration &amp; CAD Submission</h2>
+            <p class="body-sm">Submit team credentials and mechanical schematics for technical inspection clearance.</p>
+          </div>
+
+          <!-- Form posts nowhere without JS; action left empty -->
+          <form id="regForm" action="register.html"  onsubmit="return validateForm()" onreset="resetForm()">
+            <div class="row2">
+              <div>
+                <label class="lbl tlabel" for="team">Team Designation</label>
+                <input class="field" id="team" type="text" placeholder="e.g. Kinetic Labs" required autofocus onblur="checkTeam()">
+                <div class="err" id="teamErr"></div>
+              </div>
+              <div>
+                <label class="lbl tlabel" for="bot">Bot Name</label>
+                <input class="field" id="bot" type="text" placeholder="e.g. Iron Clad Mk2" required onblur="checkBot()">
+                <div class="err" id="botErr"></div>
+              </div>
+            </div>
+
+            <div class="row2">
+              <div>
+                <label class="lbl tlabel" for="discipline">Discipline Category</label>
+                <select class="field" id="discipline" onchange="disciplineChanged()">
+                  <option>Robot War 15KG</option>
+                  <option>Robot War 8KG</option>
+                  <option>LFR — Line Follower Robot</option>
+                  <option>Robo Race</option>
+                  <option>Robot Soccer</option>
+                  <option>Robot Sumo</option>
+                  <option>Bot Chassis CAD Model</option>
+                  <option>Open Bot Designing</option>
+                </select>
+              </div>
+              <div>
+                <label class="lbl tlabel" for="email">Lead Engineer Email</label>
+                <input class="field" id="email" type="email" placeholder="engineer@team.org" required onblur="checkEmail()">
+                <div class="err" id="emailErr"></div>
+              </div>
+            </div>
+
+            <div class="row2">
+              <div>
+                <label class="lbl tlabel" for="phone">Phone (10 digits)</label>
+                <input class="field" id="phone" type="text" placeholder="9876543210" pattern="[0-9]{10}" maxlength="10" required onblur="checkPhone()">
+                <div class="err" id="phoneErr"></div>
+              </div>
+              <div>
+                <label class="lbl tlabel" for="password">Pit Password (min 6, with a number)</label>
+                <input class="field" id="password" type="password" placeholder="••••••" required onkeyup="showLength()" onblur="checkPassword()">
+                <div class="err" id="passErr"></div>
+              </div>
+            </div>
+
+            <div>
+              <label class="lbl tlabel">Experience Level</label>
+              <div class="radio-row body-md">
+                <label><input type="radio" name="level" value="Beginner" checked> Beginner</label>
+                <label><input type="radio" name="level" value="Intermediate"> Intermediate</label>
+                <label><input type="radio" name="level" value="Expert"> Expert</label>
+              </div>
+            </div>
+
+            <div>
+              <label class="lbl tlabel" for="cad">CAD Package / Solid Model Link (STEP / STL)</label>
+              <div class="cad-row">
+                <span class="cad-prefix code">CAD://</span>
+                <input class="field" id="cad" type="url" placeholder="github.com/team/cad-vault or Google Drive link">
+              </div>
+            </div>
+
+            <div>
+              <label class="lbl tlabel" for="specs">Chassis Architecture &amp; Weapon Specs (select text to count it)</label>
+              <textarea class="field" id="specs" rows="3" placeholder="Motor specifications, battery voltage, chassis material (Hardox/Titanium), weapon RPM..." onselect="textSelected(this)"></textarea>
+            </div>
+
+            <div class="check-row">
+              <input type="checkbox" id="rules-check" required onchange="checkRules()">
+              <label class="body-sm" for="rules-check">We confirm compliance with the 2026 Safety Rulebook and arena voltage thresholds.</label>
+            </div>
+            <div class="err" id="rulesErr"></div>
+
+            <div class="submit-wrap">
+              <button class="btn-red btn-submit" type="submit">
+                <span class="material-symbols-outlined i-lg">upload_file</span>
+                <span>Transmit Registration Packet</span>
+              </button>
+              <button class="btn-reset code" type="reset">Reset form</button>
+            </div>
+            <p class="body-sm" id="formMsg"></p>
+          </form>
+        </div>
+
+        <div class="reg-side">
+          <div class="panel">
+            <div class="panel-head">
+              <span class="code l"><span class="material-symbols-outlined i-sm c-warn">verified</span> MANDATORY PIT INSPECTION GATE</span>
+              <span class="code r">RULE: SEC-04</span>
+            </div>
+            <ul class="checklist">
+              <li><span class="ck">[✓]</span><span><strong>Physical Kill Switch:</strong> Removable link accessible outside weapon spin zone.</span></li>
+              <li><span class="ck">[✓]</span><span><strong>Radio Fail-Safe:</strong> Weapon cutoff engages within 1.0s of signal loss.</span></li>
+              <li><span class="ck">[✓]</span><span><strong>LiPo Armor:</strong> Batteries encased in min 2mm aluminum or polycarbonate enclosure.</span></li>
+              <li><span class="ck">[✓]</span><span><strong>Weapon Lock:</strong> Mechanical safety bar mandatory in pit-lane and transit.</span></li>
+            </ul>
+          </div>
+
+          <div class="panel col">
+            <div class="code lbl-m">// ACCEPTED SOLID MODELS</div>
+            <div class="fmt-grid">
+              <div>.STEP / .STP</div>
+              <div>.STL MESH</div>
+              <div>.SLDPRT</div>
+            </div>
+            <p class="body-sm">For structural validation, assemblies must include mass properties and center of gravity calculations.</p>
+          </div>
+
+          <div class="contact">
+            <div>
+              <div class="code">CHIEF MARSHAL PIT RADIO</div>
+              <div class="mail">pitlane@teambhp.robotics</div>
+            </div>
+            <a class="btn-comm code" href="about.html">COMM FREQ</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <img alt="Team BHP crimson gear-and-stallion insignia logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0rTK7ogEiiCpR5TUDwyRlWMcBxXBjF3f96C0qx9UCARKuTIKk1s4m4Axl74mcr8CCRBhckRQnQguo_YgXe7_P14k9G5kGkMgP39dHyvZimk6QnNdOYuYpF6kBuXJp1pTkH0siM7BMBFU8oIiNHSwwUSXYaHXmLs4uXxH468CmGhKCjrOQyM7glOizYvvKAR3YMJDciHpJnahxqS2AKZ01YMTgAsA37TtJ4bWBm9_Hr07pEMvXr2FP_QGOSsiDBl1wnoY">
+        </div>
+        <span>TEAM BHP ROBOTICS</span>
+      </div>
+      <div class="footer-links">
+        <a class="code" href="#">CHASSIS CAD SPECS</a>
+        <a class="code" href="#">COMPETITION RULEBOOK</a>
+        <a class="code" href="#">TELEMETRY ARCHIVE</a>
+        <a class="code" href="#">SAFETY PROTOCOLS</a>
+        <a class="code" href="#">TERMS OF ENGAGEMENT</a>
+        <a class="code" href="#">CONTACT PIT-LANE</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="body-sm">© 2026 TEAM BHP ROBOTICS LABS // COMBAT MECHATRONICS DIVISION. ALL RIGHTS RESERVED.</p>
+      <div class="footer-status">
+        <span class="tlabel">STATUS:</span>
+        <span class="pill p10 code" style="display:inline-flex;"><span class="dot"></span> ALL SYSTEMS ARMED &amp; READY</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

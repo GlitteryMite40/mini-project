@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About | TEAM BHP ROBOTICS</title>
+<link rel="icon" href="BHP.jpg">
+
+<!-- Fonts (CSS only) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700;800&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html">
+      <div class="brand-logo">
+        <img alt="Team BHP crimson gear-and-stallion insignia logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0rTK7ogEiiCpR5TUDwyRlWMcBxXBjF3f96C0qx9UCARKuTIKk1s4m4Axl74mcr8CCRBhckRQnQguo_YgXe7_P14k9G5kGkMgP39dHyvZimk6QnNdOYuYpF6kBuXJp1pTkH0siM7BMBFU8oIiNHSwwUSXYaHXmLs4uXxH468CmGhKCjrOQyM7glOizYvvKAR3YMJDciHpJnahxqS2AKZ01YMTgAsA37TtJ4bWBm9_Hr07pEMvXr2FP_QGOSsiDBl1wnoY">
+      </div>
+      <div class="brand-text">
+        <span class="brand-title">TEAM BHP ROBOTICS <span class="dot pulse"></span></span>
+        <span class="code brand-sub wide">COMBAT MECHATRONICS DIV</span>
+      </div>
+    </a>
+
+    <nav class="main-nav" aria-label="Main Navigation">
+      <a href="index.html">Home</a>
+      <a href="events.html">Events</a>
+      <a href="projects.html">Projects</a>
+      <a href="leaderboard.html">Our Team</a>
+      <a class="active" href="about.html">About</a>
+    </nav>
+
+    <div class="header-actions">
+      <a class="btn-telemetry code" href="leaderboard.html">
+        <span class="material-symbols-outlined i-sm c-red">sensors</span>
+        <span>TELEMETRY PORTAL</span>
+      </a>
+      <a class="btn-red btn-join" href="register.html">JOIN CLUB</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="sec-head">
+        <div>
+          <div class="code wide eyebrow">// ABOUT THE LAB</div>
+          <h2 class="sec-title">Facilities &amp; Capabilities</h2>
+          <p class="body-md sec-sub">The machining, power and testing infrastructure behind every Team BHP build.</p>
+        </div>
+      </div>
+
+      <div class="about-grid">
+
+        <div class="about-card">
+          <div>
+            <div class="about-icon"><span class="material-symbols-outlined">precision_manufacturing</span></div>
+            <h3 class="h-sm">CNC &amp; Waterjet Lab</h3>
+            <p class="body-sm">In-house machining facility capable of precision milling 7075-T6 aerospace aluminum, Hardox 500 armor, and custom steel drive hubs.</p>
+          </div>
+          <div class="about-foot code">TOLERANCE // ±0.02MM</div>
+        </div>
+
+        <div class="about-card">
+          <div>
+            <div class="about-icon"><span class="material-symbols-outlined">electrical_services</span></div>
+            <h3 class="h-sm">High-Current Dyno Testing</h3>
+            <p class="body-sm">Torque dyno rig rated up to 15kW continuous brushless power. Battery impedance analysis, burst telemetry, and thermal logging.</p>
+          </div>
+          <div class="about-foot code">POWER CAPACITY // 60V / 300A</div>
+        </div>
+
+        <div class="about-card">
+          <div>
+            <div class="about-icon"><span class="material-symbols-outlined">shield_with_heart</span></div>
+            <h3 class="h-sm">Certified Combat Arena</h3>
+            <p class="body-sm">Full Lexan-shielded test arena rated for ballistic kinetic weapon testing with dual exhaust filtration for safe motor burn-in.</p>
+          </div>
+          <div class="about-foot code">CONTAINMENT // 19MM POLYCARBONATE</div>
+        </div>
+
+      </div>
+
+      <aside class="panel lab-status">
+        <div class="panel-head"><span class="code l">LAB STATUS</span><span class="code r">LIVE</span></div>
+        <label class="tlabel" for="arena">ARENA BOOKINGS THIS MONTH: 70%</label>
+        <progress id="arena" value="70" max="100">70%</progress>
+        <label class="tlabel" for="batt">DYNO BATTERY BANK CHARGE: 80%</label>
+        <meter id="batt" value="0.8" min="0" max="1" low="0.3" high="0.7" optimum="1">80%</meter>
+      </aside>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <img alt="Team BHP crimson gear-and-stallion insignia logo" src="BHP.jpg  ">
+        </div>
+        <span>TEAM BHP ROBOTICS</span>
+      </div>
+      <div class="footer-links">
+        <a class="code" href="#">CHASSIS CAD SPECS</a>
+        <a class="code" href="#">COMPETITION RULEBOOK</a>
+        <a class="code" href="#">TELEMETRY ARCHIVE</a>
+        <a class="code" href="#">SAFETY PROTOCOLS</a>
+        <a class="code" href="#">TERMS OF ENGAGEMENT</a>
+        <a class="code" href="#">CONTACT PIT-LANE</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="body-sm">© 2026 TEAM BHP ROBOTICS LABS // COMBAT MECHATRONICS DIVISION. ALL RIGHTS RESERVED.</p>
+      <div class="footer-status">
+        <span class="tlabel">STATUS:</span>
+        <span class="pill p10 code" style="display:inline-flex;"><span class="dot"></span> ALL SYSTEMS ARMED & READY</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects | TEAM BHP ROBOTICS</title>
+<link rel="icon" href="BHP.jpg">
+
+<!-- Fonts (CSS only) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700;800&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+</head>
+<body>
+
+<!-- HEADER -->
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html">
+      <div class="brand-logo">
+        <img alt="Team BHP crimson gear-and-stallion insignia logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0rTK7ogEiiCpR5TUDwyRlWMcBxXBjF3f96C0qx9UCARKuTIKk1s4m4Axl74mcr8CCRBhckRQnQguo_YgXe7_P14k9G5kGkMgP39dHyvZimk6QnNdOYuYpF6kBuXJp1pTkH0siM7BMBFU8oIiNHSwwUSXYaHXmLs4uXxH468CmGhKCjrOQyM7glOizYvvKAR3YMJDciHpJnahxqS2AKZ01YMTgAsA37TtJ4bWBm9_Hr07pEMvXr2FP_QGOSsiDBl1wnoY">
+      </div>
+      <div class="brand-text">
+        <span class="brand-title">TEAM BHP ROBOTICS <span class="dot pulse"></span></span>
+        <span class="code brand-sub wide">COMBAT MECHATRONICS DIV</span>
+      </div>
+    </a>
+
+    <nav class="main-nav" aria-label="Main Navigation">
+      <a href="index.html">Home</a>
+      <a href="events.html">Events</a>
+      <a class="active" href="projects.html">Projects</a>
+      <a href="leaderboard.html">Our Team</a>
+      <a href="about.html">About</a>
+    </nav>
+
+    <div class="header-actions">
+      <a class="btn-telemetry code" href="leaderboard.html">
+        <span class="material-symbols-outlined i-sm c-red">sensors</span>
+        <span>TELEMETRY PORTAL</span>
+      </a>
+      <a class="btn-red btn-join" href="register.html">JOIN CLUB</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- PROJECTS -->
+  <section class="section bg-sec" id="projects">
+    <div class="container">
+      <div class="sec-head">
+        <div>
+          <div class="code wide eyebrow">// BUILD LOG</div>
+          <h2 class="sec-title">Team Projects &amp; Combat Bots</h2>
+          <p class="body-md sec-sub">Machines, algorithms and CAD work from the lab, from first sketch to arena-ready.</p>
+        </div>
+        <div class="right">
+          <span class="pill code"><span class="dot pulse"></span>6 ACTIVE BUILDS</span>
+        </div>
+      </div>
+
+      <div class="filters">
+        <button class="filter code active" onclick="filterCards('all', this)">All</button>
+        <button class="filter code" onclick="filterCards('war', this)">Combat</button>
+        <button class="filter code" onclick="filterCards('auto', this)">Autonomous</button>
+        <button class="filter code" onclick="filterCards('cad', this)">CAD</button>
+      </div>
+
+      <p class="tlabel" id="hoverInfo" style="color: var(--muted); margin-bottom: 1rem;">Hover a project to preview it, click to select it.</p>
+
+      <div class="proj-grid">
+
+        <article class="proj-card" data-type="war">
+          <div class="proj-img"><span class="material-symbols-outlined">swords</span></div>
+          <div class="proj-body">
+            <div class="proj-top"><span class="code">PROJECT // 01</span></div>
+            <h3 class="h-md">Apex-MK4 Heavyweight</h3>
+            <p class="body-sm">Flagship 15KG spinning drum destroyer with forged steel armor and dual brushless drive.</p>
+            <div class="tags"><span class="badge">15KG</span><span class="badge">Drum</span><span class="badge">6S</span></div>
+          </div>
+          <div class="proj-foot code">
+            <span class="status"><span class="dot"></span>ARENA READY</span>
+            <a href="register.html">VIEW SPECS</a>
+          </div>
+        </article>
+
+        <article class="proj-card" data-type="auto">
+          <div class="proj-img"><span class="material-symbols-outlined">speed</span></div>
+          <div class="proj-body">
+            <div class="proj-top"><span class="code">PROJECT // 02</span></div>
+            <h3 class="h-md">Sub-ms Line Follower</h3>
+            <p class="body-sm">High-speed LFR with IR sensor array and tuned PID loop for sharp-turn stability.</p>
+            <div class="tags"><span class="badge">LFR</span><span class="badge">ESP32</span><span class="badge">PID</span></div>
+          </div>
+          <div class="proj-foot code">
+            <span class="status"><span class="dot"></span>COMPETING</span>
+            <a href="register.html">VIEW SPECS</a>
+          </div>
+        </article>
+
+        <article class="proj-card" data-type="war">
+          <div class="proj-img"><span class="material-symbols-outlined">sports_soccer</span></div>
+          <div class="proj-body">
+            <div class="proj-top"><span class="code">PROJECT // 03</span></div>
+            <h3 class="h-md">Striker Soccer Bot</h3>
+            <p class="body-sm">Fast omni-drive soccer chassis with a spring-loaded kicker and low centre of gravity.</p>
+            <div class="tags"><span class="badge">Soccer</span><span class="badge">Omni</span><span class="badge">Kicker</span></div>
+          </div>
+          <div class="proj-foot code">
+            <span class="status"><span class="dot warn"></span>IN TESTING</span>
+            <a href="register.html">VIEW SPECS</a>
+          </div>
+        </article>
+
+        <article class="proj-card" data-type="war">
+          <div class="proj-img"><span class="material-symbols-outlined">sports_martial_arts</span></div>
+          <div class="proj-body">
+            <div class="proj-top"><span class="code">PROJECT // 04</span></div>
+            <h3 class="h-md">Sumo Pusher V2</h3>
+            <p class="body-sm">Wedge-front 500g sumo bot with high-traction wheels and edge-detect sensors.</p>
+            <div class="tags"><span class="badge">Sumo</span><span class="badge">Sensors</span><span class="badge">Wedge</span></div>
+          </div>
+          <div class="proj-foot code">
+            <span class="status"><span class="dot"></span>ARENA READY</span>
+            <a href="register.html">VIEW SPECS</a>
+          </div>
+        </article>
+
+        <article class="proj-card" data-type="war">
+          <div class="proj-img"><span class="material-symbols-outlined">directions_car</span></div>
+          <div class="proj-body">
+            <div class="proj-top"><span class="code">PROJECT // 05</span></div>
+            <h3 class="h-md">Robo Race Buggy</h3>
+            <p class="body-sm">Lightweight race buggy tuned for acceleration on a rough circuit track.</p>
+            <div class="tags"><span class="badge">Race</span><span class="badge">RC</span><span class="badge">Brushless</span></div>
+          </div>
+          <div class="proj-foot code">
+            <span class="status"><span class="dot warn"></span>IN BUILD</span>
+            <a href="register.html">VIEW SPECS</a>
+          </div>
+        </article>
+
+        <article class="proj-card" data-type="cad">
+          <div class="proj-img"><span class="material-symbols-outlined">view_in_ar</span></div>
+          <div class="proj-body">
+            <div class="proj-top"><span class="code">PROJECT // 06</span></div>
+            <h3 class="h-md">Modular Chassis CAD Library</h3>
+            <p class="body-sm">Open library of parametric chassis models with mass and CoG data, STEP/STL ready.</p>
+            <div class="tags"><span class="badge">CAD</span><span class="badge">STEP</span><span class="badge">Open</span></div>
+          </div>
+          <div class="proj-foot code">
+            <span class="status"><span class="dot"></span>PUBLISHED</span>
+            <a href="register.html">VIEW SPECS</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <img alt="Team BHP crimson gear-and-stallion insignia logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0rTK7ogEiiCpR5TUDwyRlWMcBxXBjF3f96C0qx9UCARKuTIKk1s4m4Axl74mcr8CCRBhckRQnQguo_YgXe7_P14k9G5kGkMgP39dHyvZimk6QnNdOYuYpF6kBuXJp1pTkH0siM7BMBFU8oIiNHSwwUSXYaHXmLs4uXxH468CmGhKCjrOQyM7glOizYvvKAR3YMJDciHpJnahxqS2AKZ01YMTgAsA37TtJ4bWBm9_Hr07pEMvXr2FP_QGOSsiDBl1wnoY">
+        </div>
+        <span>TEAM BHP ROBOTICS</span>
+      </div>
+      <div class="footer-links">
+        <a class="code" href="#">CHASSIS CAD SPECS</a>
+        <a class="code" href="#">COMPETITION RULEBOOK</a>
+        <a class="code" href="#">TELEMETRY ARCHIVE</a>
+        <a class="code" href="#">SAFETY PROTOCOLS</a>
+        <a class="code" href="#">TERMS OF ENGAGEMENT</a>
+        <a class="code" href="#">CONTACT PIT-LANE</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="body-sm">© 2026 TEAM BHP ROBOTICS LABS // COMBAT MECHATRONICS DIVISION. ALL RIGHTS RESERVED.</p>
+      <div class="footer-status">
+        <span class="tlabel">STATUS:</span>
+        <span class="pill p10 code" style="display:inline-flex;"><span class="dot"></span> ALL SYSTEMS ARMED &amp; READY</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

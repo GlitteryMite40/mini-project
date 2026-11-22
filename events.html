@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Events | TEAM BHP ROBOTICS</title>
+<link rel="icon" href="BHP.jpg">
+
+<!-- Fonts (CSS only) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700;800&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html">
+      <div class="brand-logo">
+        <img alt="Team BHP crimson gear-and-stallion insignia logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0rTK7ogEiiCpR5TUDwyRlWMcBxXBjF3f96C0qx9UCARKuTIKk1s4m4Axl74mcr8CCRBhckRQnQguo_YgXe7_P14k9G5kGkMgP39dHyvZimk6QnNdOYuYpF6kBuXJp1pTkH0siM7BMBFU8oIiNHSwwUSXYaHXmLs4uXxH468CmGhKCjrOQyM7glOizYvvKAR3YMJDciHpJnahxqS2AKZ01YMTgAsA37TtJ4bWBm9_Hr07pEMvXr2FP_QGOSsiDBl1wnoY">
+      </div>
+      <div class="brand-text">
+        <span class="brand-title">TEAM BHP ROBOTICS <span class="dot pulse"></span></span>
+        <span class="code brand-sub wide">COMBAT MECHATRONICS DIV</span>
+      </div>
+    </a>
+
+    <nav class="main-nav" aria-label="Main Navigation">
+      <a href="index.html">Home</a>
+      <a class="active" href="events.html">Events</a>
+      <a href="projects.html">Projects</a>
+      <a href="leaderboard.html">Our Team</a>
+      <a href="about.html">About</a>
+    </nav>
+
+    <div class="header-actions">
+      <a class="btn-telemetry code" href="leaderboard.html">
+        <span class="material-symbols-outlined i-sm c-red">sensors</span>
+        <span>TELEMETRY PORTAL</span>
+      </a>
+      <a class="btn-red btn-join" href="register.html">JOIN CLUB</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- EVENTS -->
+  <section class="section bg-sec" id="events">
+    <div class="container">
+      <div class="sec-head">
+        <div>
+          <div class="code wide eyebrow">// MISSION DIRECTIVES</div>
+          <h2 class="sec-title">Official Competitions &amp; Leagues</h2>
+          <p class="body-md sec-sub">Select an arena discipline to inspect mechanical specifications, payload boundaries, and pit rules.</p>
+        </div>
+        <div class="right">
+          <span class="pill code"><span class="dot" style="background: var(--warn);"></span>SEASON: REGISTRATIONS OPEN</span>
+        </div>
+      </div>
+
+      <div class="filters">
+        <button class="filter code active" onclick="filterCards('all', this)">All</button>
+        <button class="filter code" onclick="filterCards('war', this)">Combat</button>
+        <button class="filter code" onclick="filterCards('auto', this)">Autonomous</button>
+        <button class="filter code" onclick="filterCards('sport', this)">Sports</button>
+        <button class="filter code" onclick="filterCards('cad', this)">CAD</button>
+        <span class="code" id="count" style="color: var(--muted); align-self:center; margin-left:0.5rem;"></span>
+      </div>
+      <p class="tlabel" id="hoverInfo" style="color: var(--muted); margin-bottom: 1rem;">Hover a card to preview it, click to select it.</p>
+
+      <div class="cards">
+
+        <article class="card" data-type="war">
+          <div class="card-body">
+            <div class="card-top"><span class="code">CATEGORY // 01</span><span class="material-symbols-outlined">swords</span></div>
+            <h3 class="h-md">Robot War 15KG</h3>
+            <p class="body-sm">Heavy full-contact combat arena. Active spinning, flipper, or crusher weapons within strict 15.0 KG limits.</p>
+            <div class="limit"><span class="code l">LIMITATION:</span><span class="code v">Max Weight: 15.00 KG | 24V DC</span></div>
+          </div>
+          <div class="card-foot"><a class="btn-details" href="register.html">View Details</a></div>
+        </article>
+
+        <article class="card" data-type="war">
+          <div class="card-body">
+            <div class="card-top"><span class="code">CATEGORY // 02</span><span class="material-symbols-outlined">bolt</span></div>
+            <h3 class="h-md">Robot War 8KG</h3>
+            <p class="body-sm">Middleweight kinetic warfare requiring tight maneuverability, compact structural bulkheads, and fail-safes.</p>
+            <div class="limit"><span class="code l">LIMITATION:</span><span class="code v">Max Weight: 8.00 KG | Dual Kill-Switch</span></div>
+          </div>
+          <div class="card-foot"><a class="btn-details" href="register.html">View Details</a></div>
+        </article>
+
+        <article class="card" data-type="auto">
+          <div class="card-body">
+            <div class="card-top"><span class="code">CATEGORY // 03</span><span class="material-symbols-outlined">timeline</span></div>
+            <h3 class="h-md">[LFR] Line Follower</h3>
+            <p class="body-sm">High-speed autonomous trajectory tracking through complex maze loops, hairpin bends, and optical cross-sections.</p>
+            <div class="limit"><span class="code l">LIMITATION:</span><span class="code v">Sensor Array: 8x IR / PID Microcontroller</span></div>
+          </div>
+          <div class="card-foot"><a class="btn-details" href="register.html">View Details</a></div>
+        </article>
+
+        <article class="card" data-type="sport">
+          <div class="card-body">
+            <div class="card-top"><span class="code">CATEGORY // 04</span><span class="material-symbols-outlined">sports_score</span></div>
+            <h3 class="h-md">Robo Race</h3>
+            <p class="body-sm">Extreme terrain obstacle time-trial across sand pits, inclined bridges, loose gravel, and steep speed ramps.</p>
+            <div class="limit"><span class="code l">LIMITATION:</span><span class="code v">Ground Clearance: 40mm | 4WD R/C</span></div>
+          </div>
+          <div class="card-foot"><a class="btn-details" href="register.html">View Details</a></div>
+        </article>
+
+        <article class="card" data-type="sport">
+          <div class="card-body">
+            <div class="card-top"><span class="code">CATEGORY // 05</span><span class="material-symbols-outlined">sports_soccer</span></div>
+            <h3 class="h-md">Robot Soccer</h3>
+            <p class="body-sm">2v2 synchronized mechatronics pitch combat with pneumatic kicker solenoids and omni-directional drive plates.</p>
+            <div class="limit"><span class="code l">LIMITATION:</span><span class="code v">Max Dimension: 300x300mm | Omni Wheels</span></div>
+          </div>
+          <div class="card-foot"><a class="btn-details" href="register.html">View Details</a></div>
+        </article>
+
+        <article class="card" data-type="war">
+          <div class="card-body">
+            <div class="card-top"><span class="code">CATEGORY // 06</span><span class="material-symbols-outlined">front_hand</span></div>
+            <h3 class="h-md">Robot Sumo</h3>
+            <p class="body-sm">Brute torque and magnetic traction inside a circular Dohyo. Drive opponent out of the boundary perimeter ring.</p>
+            <div class="limit"><span class="code l">LIMITATION:</span><span class="code v">Dohyo Radius: 154cm | Max 3.00 KG</span></div>
+          </div>
+          <div class="card-foot"><a class="btn-details" href="register.html">View Details</a></div>
+        </article>
+
+        <article class="card" data-type="cad">
+          <div class="card-body">
+            <div class="card-top"><span class="code">CATEGORY // 07</span><span class="material-symbols-outlined">deployed_code</span></div>
+            <h3 class="h-md">Bot Chassis CAD Model</h3>
+            <p class="body-sm">Parametric solid modeling, FEA stress simulation, and production assembly blueprints for combat vehicular frames.</p>
+            <div class="limit"><span class="code l">LIMITATION:</span><span class="code v">File Format: STEP / SLDPRT / IGES</span></div>
+          </div>
+          <div class="card-foot"><a class="btn-details" href="register.html">View Details</a></div>
+        </article>
+
+        <article class="card" data-type="cad">
+          <div class="card-body">
+            <div class="card-top"><span class="code">CATEGORY // 08</span><span class="material-symbols-outlined">precision_manufacturing</span></div>
+            <h3 class="h-md">Open Bot Designing</h3>
+            <p class="body-sm">Free-class mechatronics innovation: bipedal hexapods, swarm intelligence arrays, and novel pneumatic locomotion rigs.</p>
+            <div class="limit"><span class="code l">LIMITATION:</span><span class="code v">Unrestricted Class | Complete BOM Required</span></div>
+          </div>
+          <div class="card-foot"><a class="btn-details" href="register.html">View Details</a></div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <img alt="Team BHP crimson gear-and-stallion insignia logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0rTK7ogEiiCpR5TUDwyRlWMcBxXBjF3f96C0qx9UCARKuTIKk1s4m4Axl74mcr8CCRBhckRQnQguo_YgXe7_P14k9G5kGkMgP39dHyvZimk6QnNdOYuYpF6kBuXJp1pTkH0siM7BMBFU8oIiNHSwwUSXYaHXmLs4uXxH468CmGhKCjrOQyM7glOizYvvKAR3YMJDciHpJnahxqS2AKZ01YMTgAsA37TtJ4bWBm9_Hr07pEMvXr2FP_QGOSsiDBl1wnoY">
+        </div>
+        <span>TEAM BHP ROBOTICS</span>
+      </div>
+      <div class="footer-links">
+        <a class="code" href="#">CHASSIS CAD SPECS</a>
+        <a class="code" href="#">COMPETITION RULEBOOK</a>
+        <a class="code" href="#">TELEMETRY ARCHIVE</a>
+        <a class="code" href="#">SAFETY PROTOCOLS</a>
+        <a class="code" href="#">TERMS OF ENGAGEMENT</a>
+        <a class="code" href="#">CONTACT PIT-LANE</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="body-sm">© 2026 TEAM BHP ROBOTICS LABS // COMBAT MECHATRONICS DIVISION. ALL RIGHTS RESERVED.</p>
+      <div class="footer-status">
+        <span class="tlabel">STATUS:</span>
+        <span class="pill p10 code" style="display:inline-flex;"><span class="dot"></span> ALL SYSTEMS ARMED &amp; READY</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

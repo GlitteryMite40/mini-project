@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Team | TEAM BHP ROBOTICS</title>
+<link rel="icon" href="BHP.jpg">
+
+<!-- Fonts (CSS only) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700;800&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html">
+      <div class="brand-logo">
+        <img alt="Team BHP crimson gear-and-stallion insignia logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0rTK7ogEiiCpR5TUDwyRlWMcBxXBjF3f96C0qx9UCARKuTIKk1s4m4Axl74mcr8CCRBhckRQnQguo_YgXe7_P14k9G5kGkMgP39dHyvZimk6QnNdOYuYpF6kBuXJp1pTkH0siM7BMBFU8oIiNHSwwUSXYaHXmLs4uXxH468CmGhKCjrOQyM7glOizYvvKAR3YMJDciHpJnahxqS2AKZ01YMTgAsA37TtJ4bWBm9_Hr07pEMvXr2FP_QGOSsiDBl1wnoY">
+      </div>
+      <div class="brand-text">
+        <span class="brand-title">TEAM BHP ROBOTICS <span class="dot pulse"></span></span>
+        <span class="code brand-sub wide">COMBAT MECHATRONICS DIV</span>
+      </div>
+    </a>
+
+    <nav class="main-nav" aria-label="Main Navigation">
+      <a href="index.html">Home</a>
+      <a href="events.html">Events</a>
+      <a href="projects.html">Projects</a>
+      <a class="active" href="leaderboard.html">Our Team</a>
+      <a href="about.html">About</a>
+    </nav>
+
+    <div class="header-actions">
+      <a class="btn-telemetry code" href="leaderboard.html">
+        <span class="material-symbols-outlined i-sm c-red">sensors</span>
+        <span>TELEMETRY PORTAL</span>
+      </a>
+      <a class="btn-red btn-join" href="register.html">JOIN CLUB</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- LEADERBOARD -->
+  <section class="section bg-base" id="leaderboard">
+    <div class="container">
+      <div class="sec-head sm-mb">
+        <div>
+          <div class="code eyebrow">// LIVE ARENA BRACKET</div>
+          <h2 class="sec-title">Tournament Standings &amp; Pit Feed</h2>
+          <p class="body-md sec-sub">Real-time telemetry and qualification ranks from the active combat trials.</p>
+        </div>
+        <div class="right g3">
+          <span class="code" style="color: var(--muted);">TELEMETRY SYNC:</span>
+          <span class="pill p10 code"><span class="dot"></span> LIVE 60Hz</span>
+        </div>
+      </div>
+
+      <div class="table-box">
+        <div class="table-scroll">
+          <table class="standings">
+            <thead>
+              <tr class="tlabel">
+                <th class="rank">RANK</th>
+                <th>BOT DESIGNATION</th>
+                <th>TEAM / LAB</th>
+                <th>DISCIPLINE</th>
+                <th>WEIGHT CLASS</th>
+                <th>KINETIC ENERGY</th>
+                <th class="end">STATUS</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="rank first">#01</td>
+                <td class="name"><span class="material-symbols-outlined i-sm c-red">shield</span> APEX PREDATOR MK-IV</td>
+                <td class="t2">TEAM BHP ALPHA DIVISION</td>
+                <td class="t1">Robot War 15KG</td>
+                <td class="t2">14.92 KG</td>
+                <td class="tr-red">14.8 kJ</td>
+                <td class="end"><span class="badge hot">QUALIFIED // WINNER</span></td>
+              </tr>
+              <tr>
+                <td class="rank">#02</td>
+                <td class="name"><span class="material-symbols-outlined i-sm c-muted">shield</span> VORTEX BLADE X</td>
+                <td class="t2">NITRO HYDRAULICS LAB</td>
+                <td class="t1">Robot War 15KG</td>
+                <td class="t2">14.85 KG</td>
+                <td class="t1">12.1 kJ</td>
+                <td class="end"><span class="badge">FINALIST // 4-1</span></td>
+              </tr>
+              <tr>
+                <td class="rank">#03</td>
+                <td class="name"><span class="material-symbols-outlined i-sm c-muted">memory</span> QUICKSILVER PID-9</td>
+                <td class="t2">CIRCUIT OVERDRIVE CO.</td>
+                <td class="t1">LFR (Line Follower)</td>
+                <td class="t2">0.65 KG</td>
+                <td class="tm">0.14 kJ</td>
+                <td class="end"><span class="badge white">RECORD: 14.22s</span></td>
+              </tr>
+              <tr>
+                <td class="rank">#04</td>
+                <td class="name"><span class="material-symbols-outlined i-sm c-muted">swords</span> ANVIL-8 HEAVY SLAMMER</td>
+                <td class="t2">TITAN MECHATRONICS</td>
+                <td class="t1">Robot War 8KG</td>
+                <td class="t2">7.98 KG</td>
+                <td class="t1">8.4 kJ</td>
+                <td class="end"><span class="badge">SEMIFINALIST</span></td>
+              </tr>
+              <tr>
+                <td class="rank">#05</td>
+                <td class="name"><span class="material-symbols-outlined i-sm c-muted">sports_soccer</span> STRIKER-X OMNI</td>
+                <td class="t2">TEAM BHP DYNAMICS</td>
+                <td class="t1">Robot Soccer</td>
+                <td class="t2">2.90 KG</td>
+                <td class="tm">--</td>
+                <td class="end"><span class="badge">GROUP LEADER</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="table-foot">
+          <span>SHOWING ACTIVE CHAMPIONSHIP DIVISION TELEMETRY</span>
+          <a class="code" href="projects.html">DOWNLOAD BRACKET CSV <span class="material-symbols-outlined i-sm">download</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <img alt="Team BHP crimson gear-and-stallion insignia logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0rTK7ogEiiCpR5TUDwyRlWMcBxXBjF3f96C0qx9UCARKuTIKk1s4m4Axl74mcr8CCRBhckRQnQguo_YgXe7_P14k9G5kGkMgP39dHyvZimk6QnNdOYuYpF6kBuXJp1pTkH0siM7BMBFU8oIiNHSwwUSXYaHXmLs4uXxH468CmGhKCjrOQyM7glOizYvvKAR3YMJDciHpJnahxqS2AKZ01YMTgAsA37TtJ4bWBm9_Hr07pEMvXr2FP_QGOSsiDBl1wnoY">
+        </div>
+        <span>TEAM BHP ROBOTICS</span>
+      </div>
+      <div class="footer-links">
+        <a class="code" href="#">CHASSIS CAD SPECS</a>
+        <a class="code" href="#">COMPETITION RULEBOOK</a>
+        <a class="code" href="#">TELEMETRY ARCHIVE</a>
+        <a class="code" href="#">SAFETY PROTOCOLS</a>
+        <a class="code" href="#">TERMS OF ENGAGEMENT</a>
+        <a class="code" href="#">CONTACT PIT-LANE</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="body-sm">© 2026 TEAM BHP ROBOTICS LABS // COMBAT MECHATRONICS DIVISION. ALL RIGHTS RESERVED.</p>
+      <div class="footer-status">
+        <span class="tlabel">STATUS:</span>
+        <span class="pill p10 code" style="display:inline-flex;"><span class="dot"></span> ALL SYSTEMS ARMED &amp; READY</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
